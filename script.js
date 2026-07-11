@@ -136,6 +136,7 @@ dialog.addEventListener('close', () => caseTrigger?.focus());
 
 const form = document.querySelector('#project-form');
 const formSuccess = form.querySelector('.form-success');
+const formSubmitButton = form.querySelector('button[type="submit"]');
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -154,19 +155,10 @@ form.addEventListener('submit', (event) => {
     return;
   }
 
-  const data = new FormData(form);
-  const subject = encodeURIComponent(`Новый проект: ${data.get('product')}`);
-  const body = encodeURIComponent([
-    `Имя: ${data.get('name')}`,
-    `Контакт: ${data.get('contact')}`,
-    `Продукт: ${data.get('product')}`,
-    '',
-    'Задача:',
-    data.get('message')
-  ].join('\n'));
-
   formSuccess.classList.add('is-visible');
-  window.location.href = `mailto:aleksey-rusin96@mail.ru?subject=${subject}&body=${body}`;
+  formSubmitButton.disabled = true;
+  formSubmitButton.setAttribute('aria-busy', 'true');
+  setTimeout(() => HTMLFormElement.prototype.submit.call(form), 80);
 });
 
 form.querySelectorAll('[required]').forEach((field) => {

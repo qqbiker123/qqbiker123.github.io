@@ -100,6 +100,7 @@ img, svg { display: block; max-width: 100%; }
 .button-primary:hover { background: #c6ff7c; border-color: #c6ff7c; box-shadow: 0 0 0 7px var(--accent-soft); }
 .button-dark { background: var(--accent-ink); border-color: var(--accent-ink); color: var(--text); }
 .button-dark:hover { background: #202b1d; border-color: #202b1d; }
+.button:disabled { opacity: .65; cursor: wait; transform: none; }
 .text-link { min-height: 44px; display: inline-flex; align-items: center; gap: .6rem; border-bottom: 1px solid var(--line-strong); font-size: .93rem; transition: border-color .2s ease; }
 .text-link:hover { border-color: var(--accent); }
 

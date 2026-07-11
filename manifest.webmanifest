@@ -1,0 +1,20 @@
+{
+  "name": "Алексей Русин — Digital Workshop",
+  "short_name": "Digital Workshop",
+  "description": "Разработка сайтов, веб-сервисов, Telegram-ботов и автоматизаций для бизнеса.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0b0e0c",
+  "theme_color": "#0b0e0c",
+  "lang": "ru-RU",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
